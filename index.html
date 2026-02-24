@@ -57,33 +57,35 @@
         .contact {
             margin-top: 20px;
         }
-        .responsive-imgs {
+        .fellowship-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-bottom: 24px;
+            justify-items: center;
+        }
+        .fellowship-item {
             display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 16px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
         }
-        .responsive-grid {
-            display: flex
-        }
-        .responsive-imgs img {
+        .fellowship-item img {
             height: 120px;
             max-width: 100%;
             border-radius: 8px;
             object-fit: cover;
+            margin-bottom: 12px;
+        }
+        .fellowship-text {
+            text-align: center;
+            font-size: 12pt;
         }
         @media (max-width: 600px) {
-            .responsive-imgs {
-                flex-direction: column;
-                align-items: center;
+            .fellowship-grid {
+                grid-template-columns: 1fr;
             }
-            .responsive-imgs img {
+            .fellowship-item img {
                 height: 80px;
-                margin-bottom: 12px;
-            }
-            table {
-                font-size: 14px;
             }
         }
         table {
@@ -131,20 +133,19 @@
 
         <h2>Fellowship Chairs</h2>
         <!-- Added images above the table -->
-        <div class="responsive-grid">
-            <div style="display:block"><img src="kamal.webp" alt="Kamal Karlapalem" style="height:120px; margin-right: 24px; border-radius: 8px;"><div><a href="https://www.iiit.ac.in/people/faculty/kamal.karlapalem/">Kamalakar Karlapalem, IIIT Hyderabad</a></div></div>
-            <div style="display:block"><img src="arnab.webp" alt="Arnab Bhattacharya" style="height:120px; border-radius: 8px;"><div><a href="https://www.csa.iisc.ac.in/~arnabb/">Arnab Bhattacharya, IIT Kanpur</a></div></div>
-        </div>
-            <!-- <table>
-            <tr class="responsive-imgs">
-                <td><img src="kamal.webp" alt="Kamal Karlapalem" style="height:120px; margin-right: 24px; border-radius: 8px;"></td>
-                <td><img src="arnab.webp" alt="Arnab Bhattacharya" style="height:120px; border-radius: 8px;"></td>
-            </tr>
-            <tr>
-                <td><a href="https://www.iiit.ac.in/people/faculty/kamal.karlapalem/">Kamalakar Karlapalem, IIIT Hyderabad</a></td>
-                <td><a href="https://www.csa.iisc.ac.in/~arnabb/">Arnab Bhattacharya, IIT Kanpur</a></td>
-            </tr>
-        </table> -->
-        <!-- Removed container bounding box -->
+                <div class="fellowship-grid">
+                    <div class="fellowship-item">
+                        <img src="kamal.webp" alt="Kamal Karlapalem">
+                        <div class="fellowship-text">
+                            <a href="https://www.iiit.ac.in/people/faculty/kamal.karlapalem/">Kamalakar Karlapalem, IIIT Hyderabad</a>
+                        </div>
+                    </div>
+                    <div class="fellowship-item">
+                        <img src="arnab.webp" alt="Arnab Bhattacharya">
+                        <div class="fellowship-text">
+                            <a href="https://www.csa.iisc.ac.in/~arnabb/">Arnab Bhattacharya, IIT Kanpur</a>
+                        </div>
+                    </div>
+                </div>
 </body>
 </html>
