@@ -1,3 +1,42 @@
+        <style>
+            .responsive-imgs {
+                display: flex;
+                justify-content: center;
+                gap: 24px;
+                margin-bottom: 16px;
+                flex-wrap: wrap;
+            }
+            .responsive-imgs img {
+                height: 120px;
+                max-width: 100%;
+                border-radius: 8px;
+                object-fit: cover;
+            }
+            @media (max-width: 600px) {
+                .responsive-imgs img {
+                    height: 80px;
+                }
+                table {
+                    font-size: 14px;
+                }
+            }
+            table {
+                border: none;
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                border-collapse: collapse;
+            }
+            td, th {
+                padding: 8px;
+                word-break: break-word;
+            }
+        </style>
+        <div class="responsive-imgs">
+            <img src="kamal.webp" alt="Kamal Karlapalem">
+            <img src="arnab.webp" alt="Arnab Bhattacharya">
+        </div>
+        <table>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,7 +134,7 @@
 
         <h2>Fellowship Chairs</h2>
         <!-- Added images above the table -->
-        <table>
+            <table>
             <tr>
                 <td><img src="kamal.webp" alt="Kamal Karlapalem" style="height:120px; margin-right: 24px; border-radius: 8px;"></td>
                 <td><img src="arnab.webp" alt="Arnab Bhattacharya" style="height:120px; border-radius: 8px;"></td>
